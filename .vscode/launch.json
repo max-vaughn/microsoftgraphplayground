@@ -1,0 +1,116 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+
+        {
+            "name": "PSH: Beta User.Read.All",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${worspaceFolder}\\ConnectScripts\\connect_user_read_beta.ps1"
+        },
+        {
+            "name": "PowerShell: Launch Script",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}\\Samples\\testrun.ps1",
+            "args": ["-PageID", "1197510","-PerTok", ""]
+        },
+        {
+            "name": "PSH: Lch findPath",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}\\Samples\\findpath.ps1",
+            "args": ["-PerTok", ""]
+        },
+        {
+            "name": "PSH: Lch tstpagepath",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}\\Samples\\tstpagepath.ps1",
+            "args": ["-PerTok", ""]
+        },
+        {
+            "name": "PSH: Lch Page List",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}\\Samples\\getpagelist.ps1",
+            "args": ["-PerTok", ""]
+        },
+        {
+            "name": "PSH: Lch YAML List",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}\\Samples\\buildtaglist.ps1",
+            "args": ["-PerTok", ""]
+        },
+        {
+            "name": "PSH: match ids",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}\\Samples\\matchPageIds.ps1",
+            "args": ["-PerTok", "BAD_FOOD", "-AzureData", "D:\\data\\AzureAdWiki.csv", "-KeyVaultData", "D:\\data\\KeyVaultWiki.csv"]
+        },
+        {
+            "name": "PSH: Off Page List",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}\\Samples\\filelistOffIdentity.ps1",
+            "args": ["-PerTok", ""]
+        },        {
+            "name": "PSH: ACE Page List",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}\\Samples\\getpagelistACE.ps1",
+            "args": ["-PerTok", ""]
+        },
+        {
+            "name": "PSH: Key Vault",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}\\Samples\\keyvaultcontent.ps1",
+            "args": ["-PerTok", ""]
+        },        {
+            "name": "PSH: Asset List",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}\\Samples\\buildassetslist.ps1",
+            "args": []
+        },        {
+            "name": "PSH: Get Comments",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}\\Samples\\getwikicomments.ps1",
+            "args": ["-PerTok", "",
+                     "-PageID", "1300527"]
+        },
+        {
+            "name": "PSH: cpy Assets",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}\\Samples\\copyassetlist.ps1",
+            "args": ["-PathVarCsv", "d:\\data\\AzureManagedAssetList.csv",
+                     "-fromPath", "'D:\\Gihub Repos\\Managed HSM\\Azure Managed HSM\\.attachments\\'",
+                     "-toPath", "'D:\\data\\hsm\\'"]
+        },
+        {
+            "name": "PSH: Set PSModulePath",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}\\setPsPath.ps1",
+            "args": ["-ModulePath", "'${workspaceFolder}\\AdoApiSupport;${workspaceFolder}\\AdoWikiUtils;'"]
+        },        {
+            "name": "PSH: Cpy Items",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}\\Samples\\attachments.ps1",
+            "args": ["-SearchPath", "'D:\\Azure AD\\Lock Box\\Azure Customer Lockbox\\.attachments\\Customer-Lockbox'", 
+            "-TargetFolder", "'D:\\Azure AD\\Lock Box\\Azure Customer Lockbox\\.attachments\\Hold'",
+             "-TargetFile", "'Lockbox Runners-ae865209-76b6-44cb-a0ac-9ae93d13e475.png'",
+            "-InputData", "'D:\\data\\Folder Links.txt'"]
+        }
+    ]
+}
