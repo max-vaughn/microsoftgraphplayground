@@ -7,17 +7,28 @@
 
 
         {
-            "name": "PSH: Beta User.Read.All",
+            "name": "PSH: Connect With Graph Exp Token",
             "type": "PowerShell",
             "request": "launch",
-            "script": "${worspaceFolder}\\ConnectScripts\\connect_user_read_beta.ps1"
+            "script": "${workspaceFolder}\\ConnectScripts\\connect_with_graph_Exp_Token.ps1"
+        },       
+         {
+            "name": "PowerShell: Popalias",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}\\PSHScripts\\popalias.ps1",
+            "args": ["-InputData", "'d:\\data\\dump.csv'",
+                     "-DomainCache", "${workspaceFolder}\\data\\domainCache.csv"
+            ]
         },
         {
-            "name": "PowerShell: Launch Script",
+            "name": "PowerShell: Export NetBios",
             "type": "PowerShell",
             "request": "launch",
-            "script": "${workspaceFolder}\\Samples\\testrun.ps1",
-            "args": ["-PageID", "1197510","-PerTok", ""]
+            "script": "${workspaceFolder}\\PSHScripts\\ExportNetBiosNames.ps1",
+            "args": ["-InputData", "'d:\\data\\engineer_mapping_data.csv'",
+                     "-DomainCache", "${workspaceFolder}\\data\\domainCache.csv"
+            ]
         },
         {
             "name": "PSH: Lch findPath",
